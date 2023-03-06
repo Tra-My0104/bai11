@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="./img2/ảnh 1 COPY1.jpg" id="image1" width="600px" height="200px" style="box-shadow: 4px 4px 4px 8px pink;" onclick="doiAnh1()"><br>
+    <img src="./img2/ảnh 2-COPY2.jpg" id="image2" width="600px" height="200px" style="box-shadow: 4px 4px 4px 8px pink;" onclick="doiAnh2()"><br>
+    <img src="./img2/ảnh 3-COPY3.jpg" id="image3" width="600px" height="200px" style="box-shadow: 4px 4px 4px 8px pink;" onclick="doiAnh3()">
+ <script>
+    let lan1=0
+    let lan2=1
+    let lan3=2
+    let anh1= document.getElementById("image1")
+    let anh2= document.getElementById("image2")
+    let anh3= document.getElementById("image3")
+
+    function doiAnh1() {
+        lan1++
+        if(lan1==1){
+            anh1.src="./img2/ảnh 2-COPY1.jpg"
+        } else if(lan1==2){
+            anh1.src="./img2/ảnh 3-COPY1.jpg"
+        }else{
+            lan1=0
+            anh1.src="./img2/ảnh 1 COPY1.jpg"
+        }
+        doiBong()
+    }
+    function doiAnh2() {
+        lan2++
+        if(lan2==1){
+            anh2.src="./img2/ảnh 2-COPY2.jpg"
+        } else if(lan2==2){
+            anh2.src="./img2/ảnh 3-COPY2.jpg"
+        }else{
+            lan2=0
+            anh2.src="./img2/anh 1 COPY2.jpg"
+        }
+        doiBong()
+    }
+    function doiAnh3() {
+        lan3++
+        if(lan3==1){
+            anh3.src="./img2/ảnh 2-COPY3.jpg"
+        } else if(lan3==2){
+            anh3.src="./img2/ảnh 3-COPY3.jpg"
+        }else{
+            lan3=0
+            anh3.src="./img2/ảnh 1 COPY3.jpg"
+        }
+        doiBong()
+        
+    }
+    function doiBong(){
+        if(lan1==lan2 && lan2==lan3){
+            anh1.style.boxShadow="green 4px 4px 4px 8px";
+            anh2.style.boxShadow="green 4px 4px 4px 8px";
+            anh3.style.boxShadow="green 4px 4px 4px 8px";
+
+        }else{
+            anh1.style.boxShadow="pink 4px 4px 4px 8px";
+            anh2.style.boxShadow="pink 4px 4px 4px 8px";
+            anh3.style.boxShadow="pink 4px 4px 4px 8px";
+
+        }
+    }
+ </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diện tích hình chữ nhật</title>
+</head>
+<body>
+    <label>nhập chiều rộng</label>
+    <input type="number" id="rong">
+    <label>nhập chiều dài</label>
+    <input type="number" id="dai">
+    <button onclick="tinh()" value="diện tích hình chữ nhật là =">bấm để xem kết quả</button>
+    <p id="result">kết quả</p>
+    <script>
+        function tinh(){
+            let a= Number(document.getElementById("rong").value);
+            let b= Number(document.getElementById("dai").value);
+            let S=a*b;
+            if(a,b>0){
+                document.getElementById("result").innerHTML="diện tích hình chữ nhật là =" + S
+            } else{
+                document.write("nhập sai cạnh ")
+            }
+        }
+    </script>
+</body>
+</html>
